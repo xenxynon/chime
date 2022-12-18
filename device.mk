@@ -313,11 +313,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPAJuiceFrameworksOverlay \
+    AOSPAChimeFrameworksOverlay \
     FrameworksResTarget \
-    JuiceFrameworksOverlay \
-    JuiceSystemUIOverlay \
-    JuiceTetheringOverlay \
+    ChimeFrameworksOverlay \
+    ChimeSystemUIOverlay \
+    ChimeTetheringOverlay \
     WifiResTarget
 
 # Perf
@@ -338,14 +338,14 @@ PRODUCT_PACKAGES += \
     init.qti.early_init.sh
 
 PRODUCT_PACKAGES += \
-    init.juice.rc \
-    init.juice.perf.rc \
+    init.chime.rc \
+    init.chime.perf.rc \
     init.target.rc \
     init.xiaomi.rc \
     init.xiaomi.display.rc \
     init.xiaomi.fingerprint.rc \
     init.xiaomi.camera.rc \
-    ueventd.juice.rc
+    ueventd.chime.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
@@ -477,7 +477,7 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
 
 # Vendor
-$(call inherit-product, vendor/xiaomi/juice/juice-vendor.mk)
+$(call inherit-product, vendor/xiaomi/chime/chime-vendor.mk)
 
 # WiFi Display
 PRODUCT_PACKAGES += \

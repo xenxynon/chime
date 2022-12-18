@@ -13,7 +13,7 @@
 // limitations under the License.
 
 runtime_resource_overlay {
-    name: "AOSPAJuiceFrameworksOverlay",
+    name: "ChimeSystemUIOverlay",
     sdk_version: "current",
     vendor: true,
 }

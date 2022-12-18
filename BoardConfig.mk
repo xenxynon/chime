@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/xiaomi/juice
+DEVICE_PATH := device/xiaomi/chime
 COMMON_PATH := device/qcom/common
 
 # APEX
@@ -93,8 +93,8 @@ ODM_MANIFEST_SKUS += lemon
 ODM_MANIFEST_LEMON_FILES := $(DEVICE_PATH)/configs/vintf/manifest_nfc.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_juice
-TARGET_RECOVERY_DEVICE_MODULES := libinit_juice
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_chime
+TARGET_RECOVERY_DEVICE_MODULES := libinit_chime
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
@@ -120,7 +120,7 @@ KERNEL_DEFCONFIG := vendor/$(TARGET_BOARD_PLATFORM)-perf_defconfig
 TARGET_DISABLED_UBWC := true
 
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := lime,citrus,lemon,pomelo,juice
+TARGET_OTA_ASSERT_DEVICE := lime,citrus,lemon,pomelo,chime,juice
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
@@ -153,7 +153,7 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # Power
-TARGET_POWER_FEATURE_EXT_LIB := //$(DEVICE_PATH):libpowerfeature_ext_juice
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
@@ -180,4 +180,4 @@ BOARD_VNDK_VERSION := current
 CONFIG_ACS := true
 
 # Inherit from the proprietary version
-include vendor/xiaomi/juice/BoardConfigVendor.mk
+include vendor/xiaomi/chime/BoardConfigVendor.mk
